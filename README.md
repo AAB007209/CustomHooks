@@ -10,11 +10,11 @@ The useLocalStorage custom hook provides a seamless way to interact with localSt
 
 #### When Input is Saved into the Local Storage
 
-![img2](https://github.com/user-attachments/assets/ae30d19e-5875-469e-96b0-690975af60e3)
+![img2](https://github.com/user-attachments/assets/c6f0f047-eb4c-4e3d-84af-90f161d8530f)
 
 #### When Input is cleared from the Local Storage
 
-![img3](https://github.com/user-attachments/assets/00c50359-7dc9-4bcc-9295-ee45d30d7aa9)
+![img3](https://github.com/user-attachments/assets/f84a3afc-414c-415a-ae7c-6da8514e9fcb)
 
 #### On Refreshing the page after clearing the Local Storage
 
