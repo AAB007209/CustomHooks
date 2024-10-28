@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+input[type="text"] {
+    width: 450px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin: 10px 0;
+}
+
+input[type="text"]:focus {
+    border-color: #d900ff;
+    box-shadow: 0 0 5px rgba(179, 0, 255, 0.2);
+}
+
+.buttons {
+    padding: 10px 20px;
+    margin: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #d900ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+}
+
+.buttons:hover {
+    background-color: #a100be;
+    transform: scale(1.05);
+}
+
+.buttons:active {
+    background-color: #a100be;
+    transform: scale(0.98);
+}
+
+.buttons:focus {
+    box-shadow: 0 0 5px rgba(221, 0, 255, 0.5);
+}
