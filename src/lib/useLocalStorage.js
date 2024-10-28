@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { useSnackbar } from "notistack";
 
 function getSavedValue(key, initialValue) {
     try {
@@ -12,21 +13,24 @@ function getSavedValue(key, initialValue) {
 }
 
 export default function useLocalStorage(key, initialValue) {
+    const { enqueueSnackbar } = useSnackbar();
     const [value, setValue] = useState(() => getSavedValue(key, initialValue));
 
     const updateLocalStorage = useCallback((newValue) => {
         setValue((prevValue) => {
             if (prevValue !== newValue) {
                 localStorage.setItem(key, JSON.stringify(newValue));
+                enqueueSnackbar("Saved to local storage!", { variant: "success" });
             }
             return newValue;
         });
-    }, [key]);
+    }, [key, enqueueSnackbar]);
 
     const clearValue = useCallback(() => {
         localStorage.removeItem(key);
         setValue(initialValue); // Reset to initial value in state as well
-    }, [key, initialValue]);
+        enqueueSnackbar("Cleared from local storage!", { variant: "info" });
+    }, [key, initialValue, enqueueSnackbar]);
 
     return [value, updateLocalStorage, clearValue];
 }
