@@ -1,6 +1,8 @@
 # CustomHooks (useLocalStorage Hook)
 The useLocalStorage custom hook provides a seamless way to interact with localStorage in React applications, managing the state of a variable while ensuring it remains in sync with the stored value. This is particularly useful for persisting user preferences or settings across sessions without the complexity of manually managing local storage in each component.
 
+ - I have used Notistack React Library for the Notifications.
+
 #### Live Demo - https://aab007209.github.io/CustomHooks
 
 ## Screenshots of the Project
